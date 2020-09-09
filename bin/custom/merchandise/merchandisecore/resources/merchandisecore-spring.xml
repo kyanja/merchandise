@@ -560,5 +560,7 @@
 		<property name="categorySource" ref="hybrisBrandCategorySource"/>
 	</bean>
 
+	<bean id="dynamicHybrisCustomerAttributeBean"
+		  class="de.hybris.merchandise.core.model.DynamicHybrisCustomerAttributeBean"/>
 
 </beans>

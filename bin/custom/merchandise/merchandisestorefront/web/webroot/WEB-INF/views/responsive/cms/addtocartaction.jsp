@@ -7,18 +7,17 @@
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product" %>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
-
 <c:url value="${url}" var="addToCartUrl"/>
 <spring:url value="${product.url}/configuratorPage/{/configuratorType}" var="configureProductUrl" htmlEscape="false">
     <spring:param name="configuratorType"  value="${configuratorType}"/>
 </spring:url>
-
 <product:addToCartTitle/>
 
 <form:form method="post" id="configureForm" class="configure_form" action="${configureProductUrl}">
 <c:if test="${product.purchasable}">
 	<input type="hidden" maxlength="3" size="1" id="qty" name="qty" class="qty js-qty-selector-input" value="1">
 </c:if>
+
 <input type="hidden" name="productCodePost" value="${fn:escapeXml(product.code)}"/>
 
 <c:if test="${empty showAddToCart ? true : showAddToCart}">
@@ -26,6 +25,7 @@
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 		<c:set var="buttonType">submit</c:set>
 	</c:if>
+
 	<c:choose>
 		<c:when test="${fn:contains(buttonType, 'button')}">
 			<c:if test="${product.configurable}">
@@ -56,7 +56,18 @@
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 		<c:set var="buttonType">submit</c:set>
 	</c:if>
+	<!-- make product unavailable if user external and product internal only -->
+	<spring:theme var="addToCartProblemText" code="product.variants.out.of.stock"/>
+	<c:if test="${product.internalOnly and !user.internal}">
+		<c:set var="buttonType">buttonInternalOnly</c:set>
+		<spring:theme var="addToCartProblemText" code="text.addToCart.unavailable"/>
+	</c:if>
 	<c:choose>
+		<c:when test="${fn:contains(buttonType, 'buttonInternalOnly')}">
+			<button type="${buttonType}" class="addToCartButton outOfStock" disabled="disabled">
+					${addToCartProblemText}
+			</button>
+		</c:when>
 		<c:when test="${fn:contains(buttonType, 'button')}">
 			<button type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart btn-icon glyphicon-shopping-cart outOfStock" disabled="disabled">
 				<spring:theme code="product.variants.out.of.stock"/>
