@@ -118,10 +118,34 @@
             <itemtype code="Customer" generate="false" autocreate="false">
                 <attributes>
                     <attribute qualifier="isInternal" type="java.lang.Boolean">
-                        <description>Defines if the customer is a hybris internal employee. Aggregated information</description>
-                        <persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean" />
+                    <description>Defines if the customer is a hybris internal employee. Aggregated information</description>
+                    <persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean" />
+                    <modifiers read="true" write="true" optional="true"
+                               unique="false" />
+                </attribute>
+                    <attribute qualifier="dateOfBirth" type="java.lang.String">
+                    <description>Date of birth of a Customer</description>
+                    <persistence type="property" />
+                    <modifiers read="true" write="true" optional="true"
+                               unique="false" />
+                </attribute>
+                    <attribute qualifier="mobilePhoneNumber" type="java.lang.String">
+                    <description>Mobile Phone of a Customer</description>
+                    <persistence type="property" />
+                    <modifiers read="true" write="true" optional="true"
+                               unique="false" />
+                </attribute>
+
+                    <attribute qualifier="alternativeMail" type="java.lang.String">
+                        <description>Alternative email of a Customer</description>
+                        <persistence type="property" />
                         <modifiers read="true" write="true" optional="true"
                                    unique="false" />
+                    </attribute>
+                    <attribute autocreate="true" qualifier="customerSiteAge" type="java.lang.Integer">
+                        <modifiers write="false"/>
+                        <persistence type="dynamic" attributeHandler="customerSiteAge"/>
+                        <description>Dynamic attribute for customer site age</description>
                     </attribute>
                 </attributes>
             </itemtype>

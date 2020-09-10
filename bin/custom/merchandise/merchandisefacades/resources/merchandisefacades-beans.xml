@@ -20,5 +20,19 @@
 
     <bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
         <property name="internal" type="boolean"/>
+        <property name="dateOfBirthBean" type="String"/>
+        <property name="mobilePhoneNumberBean" type="String"/>
+        <property name="alternativeMailBean" type="String"/>
+        <property name="customerSiteAgeBean" type="String"/>
+        <property name="emailPreferenceBean" type="String"/>
+
+    </bean>
+
+    <bean class="de.hybris.platform.commercefacades.user.data.RegisterData">
+        <property name="dateOfBirthBean" type="String"/>
+        <property name="mobilePhoneNumberBean" type="String"/>
+        <property name="alternativeMailBean" type="String"/>
+        <property name="customerSiteAgeBean" type="String"/>
+        <property name="emailPreferenceBean" type="String"/>
     </bean>
 </beans>

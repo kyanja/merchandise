@@ -603,4 +603,7 @@
     <bean id="rangedAvgCustomerRatingProvider"
           class="de.hybris.merchandise.core.search.solrfacetsearch.provider.impl.MerchandiseProductReviewAverageRatingValueProvider"
           parent="productReviewAverageRatingValueProvider"/>
+
+    <bean id="customerSiteAge"
+          class="de.hybris.merchandise.core.model.CustomerSiteAgeHandler"/>
 </beans>

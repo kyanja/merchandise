@@ -202,4 +202,18 @@
 		<property name="list" ref="customerConverter"/>
 		<property name="add"  ref="customerInternalPopulator"/>
 	</bean>
+
+	<bean id="customerMerchandisePopulator" class="de.hybris.merchandise.facades.populators.MerchandiseCustomerPopulator"/>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="customerConverter"/>
+		<property name="add"  ref="customerMerchandisePopulator"/>
+	</bean>
+
+	<alias name="defaultMerchandiseCustomerFacade" alias="customerFacade"/>
+	<bean id="defaultMerchandiseCustomerFacade" class="de.hybris.merchandise.facades.customer.impl.DefaultMerchandiseCustomerFacade"
+	parent="defaultCustomerFacade">
+	</bean>
+
+
 </beans>

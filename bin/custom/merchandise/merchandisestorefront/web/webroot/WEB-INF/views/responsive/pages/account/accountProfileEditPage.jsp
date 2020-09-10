@@ -25,6 +25,11 @@
                     <formElement:formSelectBoxDefaultEnabled idKey="profile.title" labelKey="profile.title" path="titleCode" mandatory="true" skipBlank="false" skipBlankMessageKey="form.select.none" items="${titleData}" selectCSSClass="form-control"/>
                     <formElement:formInputBox idKey="profile.firstName" labelKey="profile.firstName" path="firstName" inputCSS="text" mandatory="true"/>
                     <formElement:formInputBox idKey="profile.lastName" labelKey="profile.lastName" path="lastName" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.dateOfBirthForm" labelKey="profile.dateOfBirthForm" path="dateOfBirthForm" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.mobilePhoneNumberForm" labelKey="profile.mobilePhoneNumberForm" path="mobilePhoneNumberForm" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.alternativeMailForm" labelKey="profile.alternativeMailForm" path="alternativeMailForm" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.customerSiteAgeForm" labelKey="profile.customerSiteAgeForm" path="customerSiteAgeForm" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.isEmailPreferenceEnabled" labelKey="profile.isEmailPreferenceEnabled" path="isEmailPreferenceEnabled" inputCSS="text" mandatory="true"/>
 
                     <div class="row">
                         <div class="col-sm-6 col-sm-push-6">
