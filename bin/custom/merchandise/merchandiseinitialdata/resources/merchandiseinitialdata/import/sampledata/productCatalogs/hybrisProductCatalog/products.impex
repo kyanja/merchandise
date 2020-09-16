@@ -57,3 +57,20 @@ INSERT_UPDATE Product; code[unique = true]; $supercategories; manufacturerName; 
                      ; 0210               ; 220             ; Clothes & Co    ; SWEAT-WHITE-F-S ; pieces    ; true
                      ; 0211               ; 220             ; Clothes & Co    ; SWEAT-WHITE-F-M ; pieces    ; true
                      ; 0212               ; 220             ; Clothes & Co    ; SWEAT-WHITE-F-L ; pieces    ; true
+
+
+
+# Impex for adding sample data alias for Books
+INSERT_UPDATE Product; code[unique = true]; $catalogVersion; unit(code); supercategories(code, $catalogVersion); varianttype(code); $approved; $taxGroup; ean        ; alias
+                     ; 0213               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for headFirstJava
+                     ; 0214               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for headFirstProgramming
+                     ; 0215               ;                ; pieces    ; 240,                                  ;                  ;          ;          ; 1022436212 ; alias for javascript
+
+
+# Impex for adding sample data
+INSERT_UPDATE ApparelProduct; code[unique = true]; $catalogVersion; unit(code); supercategories(code, $catalogVersion); varianttype(code); $approved; $taxGroup; ean        ; genders(code); alias
+                            ; 300441142          ;                ; pieces    ; Blue Tomato,caps                      ;                  ;          ;          ; 1022436212 ; MALE         ; alias for blue cap
+
+
+
+

@@ -34,6 +34,12 @@
 	<formElement:formInputBox idKey="register.email"
 		labelKey="register.email" path="email" inputCSS="form-control"
 		mandatory="true" />
+	<formElement:formInputBox idKey="register.alternativeMail"
+							  labelKey="register.alternativeMail" path="alternativeMail" inputCSS="form-control"
+							  mandatory="true" />
+	<formElement:formInputBox idKey="register.mobilePhoneNumber"
+							  labelKey="register.mobilePhoneNumber" path="mobilePhoneNumber" inputCSS="form-control"
+							  mandatory="true" />
 	<formElement:formPasswordBox idKey="password" labelKey="register.pwd"
 		path="pwd" inputCSS="form-control password-strength" mandatory="true" />
 	<formElement:formPasswordBox idKey="register.checkPwd"

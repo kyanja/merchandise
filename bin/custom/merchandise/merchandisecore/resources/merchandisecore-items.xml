@@ -123,8 +123,36 @@
                         <modifiers read="true" write="true" optional="true"
                                    unique="false" />
                     </attribute>
+                    <attribute qualifier="alternativEmail" type="java.lang.String">
+                        <description>Defines customer alternativEmail</description>
+                        <persistence type="property" />
+                        <modifiers read="true" write="true" optional="true"
+                                   unique="false" />
+                    </attribute>
+                    <attribute qualifier="mobilePhoneNumber" type="java.lang.String">
+                        <description>Defines customer mobilePhoneNumber</description>
+                        <persistence type="property" />
+                        <modifiers read="true" write="true" optional="true"
+                                   unique="false" />
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="Product" autocreate="false" generate="false">
+                <attributes>
+                    <attribute autocreate="true" qualifier="alias" type="java.lang.String"
+                               generate="true">
+                        <persistence type="property" />
+                        <modifiers read="true" write="true" search="true"
+                                   initial="true" optional="true" unique="false" />
+                    </attribute>
                 </attributes>
             </itemtype>
         </typegroup>
+
+<!--        <typegroup  name="BTG">-->
+<!--            <itemtype code="BTGCustomerInternalFlagOperand" extends="BTGAbstractCustomerOperand" autocreate="true" generate="true" jaloclass="de.hybris.merchandise.core.jalo.BTGCustomerInternalFlagOperand">-->
+<!--            </itemtype>-->
+<!--        </typegroup>-->
     </itemtypes>
 </items>

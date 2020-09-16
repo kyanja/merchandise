@@ -6,6 +6,10 @@
 
 <div class="product-details page-title">
 	<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
+		Alias : ${product.alias}
+		<h1>
+				${product.name}
+		</h1>
 		<div class="name">${fn:escapeXml(product.name)}<span class="sku">ID</span><span class="code">${fn:escapeXml(product.code)}</span></div>
 	</ycommerce:testId>
 	<product:productReviewSummary product="${product}" showLinks="true"/>

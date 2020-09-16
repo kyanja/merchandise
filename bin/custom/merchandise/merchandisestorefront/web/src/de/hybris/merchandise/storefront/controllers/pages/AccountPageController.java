@@ -488,6 +488,9 @@ public class AccountPageController extends AbstractSearchPageController
 		updateProfileForm.setTitleCode(customerData.getTitleCode());
 		updateProfileForm.setFirstName(customerData.getFirstName());
 		updateProfileForm.setLastName(customerData.getLastName());
+		updateProfileForm.setEmailNotificationbean(customerData.getEmailNotification());
+		updateProfileForm.setAlternativeMail(customerData.getAlternativEmail());
+		updateProfileForm.setMobilePhoneNumber(customerData.getMobilePhoneNumber());
 
 		model.addAttribute("updateProfileForm", updateProfileForm);
 
@@ -515,6 +518,9 @@ public class AccountPageController extends AbstractSearchPageController
 		customerData.setLastName(updateProfileForm.getLastName());
 		customerData.setUid(currentCustomerData.getUid());
 		customerData.setDisplayUid(currentCustomerData.getDisplayUid());
+		customerData.setEmailNotification(updateProfileForm.getEmailNotificationbean());
+		customerData.setAlternativEmail(updateProfileForm.getAlternativeMail());
+		customerData.setMobilePhoneNumber(updateProfileForm.getMobilePhoneNumber());
 
 		model.addAttribute(TITLE_DATA_ATTR, userFacade.getTitles());
 

@@ -171,3 +171,22 @@ INSERT_UPDATE Product; code[unique = true]; $catalogVersion; $galleryImages; $pi
                      ; 0213               ;                ; media_book1   ; /300Wx300H/headFirstJava_300x300.jpg        ; /96Wx96H/headFirstJava_96x96.jpg
                      ; 0214               ;                ; media_book2   ; /300Wx300H/headFirstProgramming_300x300.jpg ; /96Wx96H/headFirstProgramming_96x96.jpg
                      ; 0215               ;                ; media_book3   ; /300Wx300H/javascript _300x300.jpg          ; /96Wx96H/javascript _96x96.jpg
+
+
+# Create Media  for caps
+INSERT_UPDATE Media; mediaFormat(qualifier); code[unique = true]          ; $media                                    ; mime[default = 'image/jpg']; $catalogVersion; folder(qualifier)
+                   ; 1200Wx1200H           ; /1200Wx1200H/300441142_1.jpg ; $siteResource/1200Wx1200H/300441142_1.jpg ;                            ;                ; images
+                   ; 515Wx515H             ; /515Wx515H/300441142_1.jpg   ; $siteResource/515Wx515H/300441142_1.jpg   ;                            ;                ; images
+                   ; 300Wx300H             ; /300Wx300H/300441142_1.jpg   ; $siteResource/300Wx300H/300441142_1.jpg   ;                            ;                ; images
+                   ; 96Wx96H               ; /96Wx96H/300441142_1.jpg     ; $siteResource/96Wx96H/300441142_1.jpg     ;                            ;                ; images
+                   ; 65Wx65H               ; /65Wx65H/300441142_1.jpg     ; $siteResource/65Wx65H/300441142_1.jpg     ;                            ;                ; images
+                   ; 30Wx30H               ; /30Wx30H/300441142_1.jpg     ; $siteResource/30Wx30H/300441142_1.jpg     ;                            ;                ; images
+
+
+# Create Media Containers  for Caps
+INSERT_UPDATE MediaContainer; qualifier[unique = true]; $medias; $catalogVersion
+                            ; media_cap1              ; /1200Wx1200H/300441142_1.jpg,/515Wx515H/300441142_1.jpg,/300Wx300H/300441142_1.jpg,/96Wx96H/300441142_1.jpg,/65Wx65H/300441142_1.jpg,/30Wx30H/300441142_1.jpg
+
+# Update Caps with Media and Media Containers
+INSERT_UPDATE Product; code[unique = true]; $catalogVersion; $galleryImages; $picture                   ; $thumbnail
+                     ; 300441142          ;                ; media_cap1    ; /300Wx300H/300441142_1.jpg ; /96Wx96H/300441142_1.jpg

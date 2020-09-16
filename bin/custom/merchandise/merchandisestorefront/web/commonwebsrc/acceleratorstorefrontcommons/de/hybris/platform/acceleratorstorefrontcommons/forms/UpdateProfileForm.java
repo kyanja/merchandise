@@ -12,6 +12,9 @@ public class UpdateProfileForm
 	private String titleCode;
 	private String firstName;
 	private String lastName;
+	private String emailNotificationbean;
+	private String alternativeMail;
+    private String mobilePhoneNumber;
 
 
 	/**
@@ -66,6 +69,28 @@ public class UpdateProfileForm
 		this.lastName = lastName;
 	}
 
+       public String getEmailNotificationbean() {
+        return emailNotificationbean;
+    }
 
+    public void setEmailNotificationbean(String emailNotificationbean) {
+        this.emailNotificationbean = emailNotificationbean;
+    }
+	
+		 public String getAlternativeMail() {
+        return alternativeMail;
+    }
+
+    public void setAlternativeMail(String alternativeMail) {
+        this.alternativeMail = alternativeMail;
+    }
+
+    public String getMobilePhoneNumber() {
+        return mobilePhoneNumber;
+    }
+
+    public void setMobilePhoneNumber(String mobilePhoneNumber) {
+        this.mobilePhoneNumber = mobilePhoneNumber;
+    }
 
 }

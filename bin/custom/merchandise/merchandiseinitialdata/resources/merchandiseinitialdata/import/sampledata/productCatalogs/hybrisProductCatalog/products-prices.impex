@@ -33,4 +33,5 @@ UPDATE Product; code[unique = true]; $prices; $approved; $catalogVersion;
               ; 0213               ; 60,00 GBP, 56,50 EUR, 80.48 USD, 766,33 JPY
               ; 0214               ; 30,50 GBP, 63,75 EUR, 55.74 USD, 383,66 JPY
               ; 0215               ; 60,00 GBP, 69,50 EUR, 64.48 USD, 763,33 JPY
+              ; 300441142          ; 60,00 GBP, 69,50 EUR, 64.48 USD, 763,33 JPY
  

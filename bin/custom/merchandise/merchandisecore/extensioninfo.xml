@@ -15,7 +15,8 @@
                 		
         
         <requires-extension name="solrserver"/>
-                		
+
+<!--        <requires-extension name="btg" />-->
         
         <coremodule generated="true" manager="de.hybris.merchandise.core.jalo.MerchandiseCoreManager" packageroot="de.hybris.merchandise.core"/>
                 		

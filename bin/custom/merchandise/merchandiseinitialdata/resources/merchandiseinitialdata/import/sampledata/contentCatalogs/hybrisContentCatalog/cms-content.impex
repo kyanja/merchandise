@@ -558,3 +558,13 @@ INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = tr
 # Navigation Bar Component  for Books Category  with BooksCategoryLink
 INSERT_UPDATE NavigationBarComponent; $contentCV[unique = true]; uid[unique = true]; name              ; wrapAfter; link(uid, $contentCV); styleClass; &componentRef
                                     ;                          ; BooksBarComponent ; BooksBarComponent ; 10       ; BooksCategoryLink    ;           ; BooksBarComponent
+
+###### Hybrids BTG Banner
+INSERT_UPDATE SimpleBannerComponent; $contentCV[unique = true]; uid[unique = true]; name           ; &componentRef ; urlLink
+                                   ;                          ; HybridsBanner     ; Hybrids Banner ; HybridsBanner ;
+
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]          ; name                               ; active; cmsComponents(&componentRef)
+                         ;                          ; SideContent-CheckoutSummary ; Side Slot for checkoutSummaryPages ; true  ; HybridsBanner
+
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]   ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'multiStepCheckoutSummaryPage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Side-CheckoutSummary ; SideContent            ;                                                                               ; SideContent-CheckoutSummary

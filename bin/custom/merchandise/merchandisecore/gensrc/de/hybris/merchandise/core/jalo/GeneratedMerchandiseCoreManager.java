@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 12 sept. 2020 à 18:55:21                    ---
+ * --- Generated at 15 sept. 2020 à 15:06:45                    ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -28,6 +28,7 @@ import de.hybris.platform.jalo.extension.Extension;
 import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.Customer;
 import de.hybris.platform.jalo.user.User;
 import java.util.Collections;
 import java.util.HashMap;
@@ -45,7 +46,12 @@ public abstract class GeneratedMerchandiseCoreManager extends Extension
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
 		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
 		tmp.put("internalOnly", AttributeMode.INITIAL);
+		tmp.put("alias", AttributeMode.INITIAL);
 		ttmp.put("de.hybris.platform.jalo.product.Product", Collections.unmodifiableMap(tmp));
+		tmp = new HashMap<String, AttributeMode>();
+		tmp.put("alternativEmail", AttributeMode.INITIAL);
+		tmp.put("mobilePhoneNumber", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.user.Customer", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -58,6 +64,78 @@ public abstract class GeneratedMerchandiseCoreManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.alias</code> attribute.
+	 * @return the alias
+	 */
+	public String getAlias(final SessionContext ctx, final Product item)
+	{
+		return (String)item.getProperty( ctx, MerchandiseCoreConstants.Attributes.Product.ALIAS);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.alias</code> attribute.
+	 * @return the alias
+	 */
+	public String getAlias(final Product item)
+	{
+		return getAlias( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.alias</code> attribute. 
+	 * @param value the alias
+	 */
+	public void setAlias(final SessionContext ctx, final Product item, final String value)
+	{
+		item.setProperty(ctx, MerchandiseCoreConstants.Attributes.Product.ALIAS,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.alias</code> attribute. 
+	 * @param value the alias
+	 */
+	public void setAlias(final Product item, final String value)
+	{
+		setAlias( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.alternativEmail</code> attribute.
+	 * @return the alternativEmail - Defines customer alternativEmail
+	 */
+	public String getAlternativEmail(final SessionContext ctx, final Customer item)
+	{
+		return (String)item.getProperty( ctx, MerchandiseCoreConstants.Attributes.Customer.ALTERNATIVEMAIL);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.alternativEmail</code> attribute.
+	 * @return the alternativEmail - Defines customer alternativEmail
+	 */
+	public String getAlternativEmail(final Customer item)
+	{
+		return getAlternativEmail( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.alternativEmail</code> attribute. 
+	 * @param value the alternativEmail - Defines customer alternativEmail
+	 */
+	public void setAlternativEmail(final SessionContext ctx, final Customer item, final String value)
+	{
+		item.setProperty(ctx, MerchandiseCoreConstants.Attributes.Customer.ALTERNATIVEMAIL,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.alternativEmail</code> attribute. 
+	 * @param value the alternativEmail - Defines customer alternativEmail
+	 */
+	public void setAlternativEmail(final Customer item, final String value)
+	{
+		setAlternativEmail( getSession().getSessionContext(), item, value );
 	}
 	
 	public ApparelProduct createApparelProduct(final SessionContext ctx, final Map attributeValues)
@@ -241,6 +319,42 @@ public abstract class GeneratedMerchandiseCoreManager extends Extension
 	public void setInternalOnly(final Product item, final boolean value)
 	{
 		setInternalOnly( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.mobilePhoneNumber</code> attribute.
+	 * @return the mobilePhoneNumber - Defines customer mobilePhoneNumber
+	 */
+	public String getMobilePhoneNumber(final SessionContext ctx, final Customer item)
+	{
+		return (String)item.getProperty( ctx, MerchandiseCoreConstants.Attributes.Customer.MOBILEPHONENUMBER);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.mobilePhoneNumber</code> attribute.
+	 * @return the mobilePhoneNumber - Defines customer mobilePhoneNumber
+	 */
+	public String getMobilePhoneNumber(final Customer item)
+	{
+		return getMobilePhoneNumber( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.mobilePhoneNumber</code> attribute. 
+	 * @param value the mobilePhoneNumber - Defines customer mobilePhoneNumber
+	 */
+	public void setMobilePhoneNumber(final SessionContext ctx, final Customer item, final String value)
+	{
+		item.setProperty(ctx, MerchandiseCoreConstants.Attributes.Customer.MOBILEPHONENUMBER,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.mobilePhoneNumber</code> attribute. 
+	 * @param value the mobilePhoneNumber - Defines customer mobilePhoneNumber
+	 */
+	public void setMobilePhoneNumber(final Customer item, final String value)
+	{
+		setMobilePhoneNumber( getSession().getSessionContext(), item, value );
 	}
 	
 }

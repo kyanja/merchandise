@@ -7,7 +7,7 @@
 #
 
 INSERT_UPDATE SiteTheme;code[unique=true]
-;black
-;blue
-;alpha
-;lambda
+                       ;black
+                       ;blue
+                       ;alpha
+                       ;lambda

@@ -17,6 +17,9 @@ public class RegisterForm
 	private String checkPwd;
 	private ConsentForm consentForm;
 	private boolean termsCheck;
+	private String alternativeMail;
+    private String mobilePhoneNumber;
+
 
 	/**
 	 * @return the titleCode
@@ -139,4 +142,20 @@ public class RegisterForm
 	{
 		this.termsCheck = termsCheck;
 	}
+
+	 public String getAlternativeMail() {
+        return alternativeMail;
+    }
+
+    public void setAlternativeMail(String alternativeMail) {
+        this.alternativeMail = alternativeMail;
+    }
+
+    public String getMobilePhoneNumber() {
+        return mobilePhoneNumber;
+    }
+
+    public void setMobilePhoneNumber(String mobilePhoneNumber) {
+        this.mobilePhoneNumber = mobilePhoneNumber;
+    }
 }
